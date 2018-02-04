@@ -19,13 +19,20 @@ export default class App extends React.Component {
   // async componentDidMount(){
   //   this.setState({answer: await this.asyncFunc()});
   // }
+  
+  //lookup author - bridge
+  articleActions = {
+    lookupAuthor: authorId => this.state.authors[authorId], 
+  };
+
+
   render() {
     return (
      <div style={{textAlign: 'center'}}>
         <h1>wwws</h1>
         <ArticleList 
           articles={this.state.articles}
-          authors={this.state.authors}
+          articleActions={this.articleActions}
         />
       </div>);
   }

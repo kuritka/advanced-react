@@ -9,7 +9,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 module.exports = {
-  entry: ['babel-polyfill','./lib/index.js'],
+  resolve: {
+    modules: [
+      path.resolve('./lib'),
+      path.resolve('./node_modules')
+    ]
+  },
+  entry: ['babel-polyfill','./lib/renderers/dom.js'],
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js'
