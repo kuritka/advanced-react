@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DataApi from '../dataApi';
+import DataApi from 'state-api';
 import ArticleList from './ArticleList'
 import {data} from '../__tests__/testData';
 

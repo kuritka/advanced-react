@@ -11,6 +11,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   resolve: {
     modules: [
+      //thanx to this I can have following line in App.jsx
+      //import DataApi from 'state-api';
       path.resolve('./lib'),
       path.resolve('./node_modules')
     ]
